@@ -25,8 +25,8 @@ return Area;
 
     @Override
     public void paint(Graphics g) {
-        ImageIcon Grass1 = new ImageIcon("src\\New Piskel.png");
-        ImageIcon GrassFloor = new ImageIcon("src\\New Piskel (2).png");
+        ImageIcon Grass1 = new ImageIcon(Map.class.getClassLoader().getResource("New Piskel.png"));
+        ImageIcon GrassFloor = new ImageIcon(Map.class.getClassLoader().getResource("New Piskel (2).png"));
         super.paint(g);
         setMap();
         this.setBackground(Color.BLACK);
