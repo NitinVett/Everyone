@@ -4,7 +4,8 @@ import java.awt.event.ActionListener;
 
 public class Screen extends JFrame{
     //creating map object and panel object
-    Map map = new Map();
+    Player p = new Player(500,900);
+    Map map = new Map(p);
     JPanel panel = new JPanel();
     //starting screen
     public void setScreen()
@@ -68,8 +69,10 @@ public class Screen extends JFrame{
     {
         //calls on set map function from Map class to set the tile numbers in the 2d array
         map.setMap();
-        //Map extends JPanel so we directly add it to our frame
         this.add(map);
+        map.requestFocus();
+
+
 
     }
 }
